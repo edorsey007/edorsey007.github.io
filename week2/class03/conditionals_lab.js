@@ -14,7 +14,17 @@ function whatCanYouDo (age) {
 	if (age < 16) {
 		console.log('you can go to school! YES!');
 	}
-}
+	else {
+		console.log('you cannot do much outside of going to school');
+	}
+	if (age >= 16) {
+		console.log('you can drive');
+	}
+	if (age >= 62 && age < 62) {
+		console.log('you collect social security')
+		console.log('you can run for president')
+	}
+};
 
 // Change this variable's value to generate different responses from the whatCanYouDo function
 var age = 28;
@@ -23,3 +33,17 @@ var age = 28;
 whatCanYouDo(age)
 
 // Remember to use node to run this script > node conditionals_lab.js
+
+//SOLUTION
+//if (age < 16) {
+//		console.log('you can go to school! YES!');
+//	} else if (age <= 18) {
+//		console.log('you can vote!');
+//	} else if (age <= 21) {
+//		console.log('you can drink!')
+//	}
+//
+//	or
+//
+//	else if (age >= 18 && age < 21)...
+
