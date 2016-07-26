@@ -33,9 +33,8 @@ function startGame(userChoice) {
 function generateCPUChoice (cpuChoice) {
 	//figure out how to randomly generate rock, paper, scissors
 	var myArray = ['rock', 'paper', 'scissors'];
-	var randomNum = Math.floor((Math.random() * 3) + 0);
+	var randomNum = Math.floor((Math.random() * 3);
 	return myArray[randomNum];
-
 }
 
 // 2. The function compare takes two strings (userChoice and cpuChoice) that represent the user's and cpu's respective choices: 'rock', 'paper', or 'scissors'
@@ -44,6 +43,7 @@ function generateCPUChoice (cpuChoice) {
 // Hint: use if/else/ele if logic to compare the values and return a winner
 function compare(userChoice, cpuChoice) {
 	//compares the two choices
+	if 
 }
 
 

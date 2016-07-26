@@ -11,13 +11,68 @@ Making a favorites list: DOM manipulation
 */
 
 function addToList(list, newThing) {
+	var newListItem = document.createElement('li');
+	newListItem.innerHTML = newThing;
 
+	list.appendChild(newListItem);
 }
+
 
 window.onload = function() {
   // YOUR CODE HERE!
 
-};
+  document.getElementById('new-thing-button').onclick = function (event) {
+  	event.preventDefault();
+
+  	var myList = document.getElementById('fav-list');
+  	var myNewThing = document.getElementById('new-thing').value; // "hello"
+
+  	addToList(myList, myNewThing);
+
+	// var newListItem = '<li class="fav-thing">' + newThing + '</li>';
+	// "<li class="fav-thing">hello</li>"
+	// var newList = myList.innerHTML + newListItem;
+	// myList.innerHTML = newList
+
+	document.getElementById('new-thing').value = '';
+  }
+
+
+
+
+ //Second pass plus working class notes:
+
+// function addToList(list, newThing) {
+// 	var newListItem = '<li>' + newThing + 
+// }
+
+// window.onload = function() {
+//   // YOUR CODE HERE!
+
+// document.getElementById('new-thing-button').onclick = function (event) {
+	
+// 	event.preventdefault();
+
+// 	var myList = document.getElementById('fav-list');
+// 	var myNewThing = document.getElementById('new-thing').value
+
+// 	addToList(myList, myNewThing);
+
+// 	document.getElementById('new-thing').value = '';
+// }
+
+
+
+
+
+
+
+
+//First pass here:
+//   var list = document.createElement('fav-thing');
+//   var text = document.createTextNode('new thing');
+//   list.appendChild(text);
+// };
 
 /*
 
