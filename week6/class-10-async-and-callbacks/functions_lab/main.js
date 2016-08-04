@@ -27,9 +27,40 @@
  *
  */
 
-function makeCountingFunction() {}
 
-function isOdd() {}
+function makeCountingFunction(predicate) {
+	return function(array) {
+		array.forEach(function (num) {
+			console.log(num);
+		}) 
+	}
+}
+
+function isOdd(num) {
+ 	if (num % 2 === 0) {
+ 		console.log('odd');
+ 	}
+
+ }
+
+
+// function makeCountingFunction(predicate) {
+// 	return function(array) {
+// 		for (i = 0, i < array; i++) {
+// 			if function(array
+// 		}
+// 		}
+// 		}) 
+// 	}
+// }
+
+// function isOdd(num) {
+// 	if (num % 2 === 0) {
+// 		console.log('odd');
+// 	}
+
+// }
+
 
 // =============================================================================
 // The code below should work without modification.
