@@ -35,10 +35,11 @@ Open Weather Map Instructions:
 
 $(document).ready(function () {
   var apiKey = '19ab861f15cfd2e8216a3be1ed615598';
+  // Using API key to restrict access
   var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?appid=' + apiKey + '&units=imperial&q=';
 
   // Problem 1
-  $.get(weatherUrl + 'New York City')
+  $.get(weatherUrl + 'New York City') //.done = callback to handle a success 
   	.done(function (response) {
   		console.log(response);
 
@@ -52,7 +53,7 @@ $(document).ready(function () {
 			.append('<p>Wind Speed: ' + windSpeed + '</p>')
 
   	})
-  	.fail(function (xhr) {
+  	.fail(function (xhr) { // xhr = convention to handle failures. It is a failure object.
   		console.log(xhr);
   	});
 
