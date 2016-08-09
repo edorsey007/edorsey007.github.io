@@ -1,14 +1,12 @@
 $(function() {
   // DOM is now ready
+  console.log(_500px)
   _500px.init({
-     sdk_key: '1b0c4562399c1f31f0c76d72bc2b70de86e5780a'
-   });
+    // sdk_key: 'YOUR JAVASCRIPT SDK KEY'
+     sdk_key: 'df68d97b5772fc576a6c71735c19973e5df1d6ed'
+  });
 
-$('#login').click(function() {
-   _500px.login();
- });
-
-// When the user logs in we will pull their favorite photos
+  // When the user logs in we will pull their favorite photos
   _500px.on('authorization_obtained', function() {
     console.log("authorization obtained")
     $('.sign-in-view').hide();
@@ -74,5 +72,4 @@ $('#login').click(function() {
   // If the user has already logged in & authorized your application, this will fire an 'authorization_obtained' event
   // This keeps the site from prompting the user to log in each time the page is refreshed
   _500px.getAuthorizationStatus();
-
 });
