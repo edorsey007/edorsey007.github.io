@@ -43,3 +43,43 @@ $(document).ready(function () {
 	var farmAnimals = [];
 
 })
+
+function FarmAnimal (name, sound, image) {
+	this.name = name;
+	this.sound = sound;
+	this.image = image;
+	this.say = function() {
+		console.log(this.name + 'says' + this.sound)
+	}
+}
+
+// FarmAnimal.prototype
+
+function Pig (name, sound, image) {
+	this.name = name;
+	this.sound = sound;
+	this.image = image;
+}
+
+function Cow (name, sound, image) {
+	this.name = name;
+	this.sound = sound;
+	this.image = image;
+}
+
+function Horse (name, sound, image) {
+	this.name = name;
+	this.sound = sound;
+	this.image = image;
+}
+
+var pig = new FarmAnimal ('Pig', 'Oink', 'image');
+var cow = new FarmAnimal ('Cow', 'Moo', 'image');
+var horse = new FarmAnimal ('Horse', 'Nay', 'image');
+
+farmAnimals.push(pig, cow, horse);
+
+//new pig = new Pig
+//	this
+
+Pig.prototype = new Pig();
