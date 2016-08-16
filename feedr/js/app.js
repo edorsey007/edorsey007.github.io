@@ -9,9 +9,6 @@ var arr = ['Digg', 'Mashable', 'Reddit']
 
 		$('#newsSources').append('<li id=' + val + '><a href = "">' + val + '</a></li>');
 		$('#' + val).click(function(e) {
-      	e.preventDefault();
-      	open[item]();
-      	$('span').html(val);
 		});
  });
 
@@ -84,6 +81,10 @@ function pullReddit(){
     }
   });
 }
+
+pullDigg()
+pullMash()
+pullReddit()
 
 //OR
 // array.foreach(populateLi)
