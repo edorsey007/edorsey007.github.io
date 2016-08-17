@@ -29,3 +29,37 @@
 	Bonus:
 	- Remove a sticky note if a user clicks on it
 */
+$(document).ready(function() {
+
+$('#sticky-form').submit(function (event) {
+	event.preventDefault();
+	
+	// get DOM input
+	var inputColor = $('#new-color').val().trim();
+	var inputMessage = $('#new-message').val().trim();
+
+	// If the value of #item is blank, do not append the <li> and alert user
+	if (!inputColor) return alert('no input!');
+	if (!inputMessage) return alert('no input!');
+
+	// append new elements
+	$('.container-2').append('<div class="box" style="background:'+ inputColor +';">' + inputMessage + '</div>');
+
+	// // clear input
+	// $('#new-item')
+	// 	.val('');
+	// 	.focus();
+});
+
+// // remove <li> on click
+// $(document).on('click', 'li', funtion () {
+// 	$(this).remove();
+
+});
+
+
+
+
+
+
+// });

@@ -8,12 +8,17 @@ html, body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.container-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .box {
   height: 200px;
   width: 200px;
   margin: 2px;
   text-align: center;
-  font-size: 6em;
+  font-size: 2em;
   line-height: 185px;
   font-weight: bold;
 }
