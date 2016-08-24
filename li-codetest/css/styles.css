@@ -1,0 +1,205 @@
+@media (max-width: 900px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+h1, h2, h3, h4, h5, h6, p {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1 {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 200;
+	line-height: 64px;
+}
+h2 {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 200;
+	line-height: 36px;
+}
+h3 {
+	font-size: 34px;
+	font-weight: 200;
+	line-height: 50px;
+}
+h4 {
+	font-size: 24px;
+	font-weight: 200;
+	line-height: 36px;
+}
+p {
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 22px;
+}
+section {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+.navbar-inverse {
+	background-color: #F38F2C;
+	border: none;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #0079C1;
+}
+/*body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #666;
+}*/
+.content-center {
+
+}
+.navbar {
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 0px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    text-decoration: underline;
+}
+.bgimage-section1 {
+	background-image: url('../images/Photo1.jpg');
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+	box-shadow: inset 0 0 0 600px rgba(0,112,173,.80);
+}
+
+.bgimage-section3 {
+	background-image: url('../images/Photo2.jpg');
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+	box-shadow: inset 0 0 0 600px rgba(246,143,32,.80);
+}
+
+.bgimage-section5 {
+	background-image: url('../images/Photo3.jpg');
+	background-position: center center;
+	background-size: cover;
+	text-align: left;
+	box-shadow: inset 0 0 0 600px rgba(0,112,173,.80);
+}
+.bgimage-section6 {
+	background-image: url('../images/Photo4.jpg');
+	background-position: center center;
+	background-size: cover;
+	text-align: left;
+	box-shadow: inset 0 0 0 600px rgba(128,189,50,.80);
+}
+.color-white {
+    color: #fff !important;
+}
+.color-orange {
+    color: #F68F20 !important;
+}
+.color-blue {
+    color: #22ABE3 !important;
+}
+.color-green {
+    color: #80bd32 !important;
+}
+.btn-white, .image-bg .btn, .image-bg .btn:visited {
+    color: #fff;
+}
+.btn:visited {
+    color: #fff;
+}
+.btn:last-child, .btn:last-of-type {
+    margin-right: 0;
+}
+.image-bg a, .bg-primary a {
+    color: #fff;
+}
+a, a:visited, a:focus, a:active, a:hover {
+    text-decoration: none;
+    outline: none;
+}
+.btn-orange {
+    color: #fff;
+    background: #F68F20;
+    margin-top: 10px;
+}
+.btn-blue {
+    color: #fff;
+    background: #22ABE3;
+    margin-top: 10px;
+}
+.btn-green {
+    color: #fff;
+    background: #80bd32;
+    margin-top: 10px;
+}
+.btn-clear {
+	border: 2px solid #fff !important; 
+	color: #fff;
+    background: none;
+    margin-top: 10px;
+}
+.btn {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 0 15px;
+    height: 40px;
+    min-width: 150px;
+    line-height: 36px;
+    font-size: 12px;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    border-radius: 2;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    /* margin-right: 8px; */
+    /* margin-bottom: 24px; */
+}
+a {
+    font-weight: 300;
+    color: #235FAC;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    cursor: poitner;
+}
+.footer-background {
+	background-color: #59606D;
+}
+/*.social-bar {
+
+}*/
