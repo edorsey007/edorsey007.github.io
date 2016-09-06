@@ -38,7 +38,7 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
+                    <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
                     <i class="fa fa-play-circle"></i> <span class="light">Trend</span> Plays
@@ -52,21 +52,21 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-<!--                     <li>
-                        <a id="login-link" class="page-scroll" href="#">Login</a>
+                    <li>
+                        <a id="login-link" class="page-scroll" href="#">Log In</a>
                     </li>
-                </ul> -->
-             <li><a  href="#" data-bind="visible: !isLoggedIn()" onClick="AE.login()">Log In</a></li>
+                </ul>
+             <!-- <li><a  href="#" data-bind="visible: !isLoggedIn()" onClick="login()">Log In</a></li>
                     <li class="dropdown" data-bind="visible: isLoggedIn()">
                       <img class="profile-image" data-bind="attr:{src: userImage}"/>
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <span id="display-name" data-bind="text: displayName"></span>
                       <span class="icon-chevron-down"></span></a>
                       <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                        <li><a href="#" onClick="AE.logout()">Log Out</a></li>
+                        <li><a href="#" onClick="logout()">Log Out</a></li>
                       </ul>
                     </li>
-                  </ul>
+                  </ul> -->
 
             </div>
             <!-- /.navbar-collapse -->
@@ -91,6 +91,13 @@
         </div>
     </header>
 
+    <!-- Playlist Section -->
+    <section id="playlist" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2"></div>
+      </div>
+    </section>    
+
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
@@ -107,45 +114,6 @@
       </div>
     </section>
 
-    <!-- Download Section 
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="https://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Contact Section
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Map Section 
-    <div id="map"></div> -->
-
     <!-- Footer -->
     <footer>
         <div class="container text-center">
@@ -153,9 +121,8 @@
         </div>
     </footer>
 
-    <script src="js/oauth-manager.js"></script>
-    <script src="js/oauth-config.js"></script>
-
+<!--     <script src="js/oauth-manager.js"></script>
+    <script src="js/oauth-config.js"></script> -->
     <script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
       <div class="media">
@@ -272,7 +239,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
+
+    <!--     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&callback=initMap"
+      type="text/javascript"></script> -->
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
