@@ -64,6 +64,8 @@ app.get('/callback', function(req, res) {
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
 
+  console.log(req.query)
+
   if (state === null || state !== storedState) {
     res.redirect('/#' +
       querystring.stringify({
@@ -114,7 +116,7 @@ app.get('/callback', function(req, res) {
           }));
       }
     });
-  }
+  // }
 });
 
 app.get('/refresh_token', function(req, res) {
@@ -148,25 +150,25 @@ app.listen(8888);
 // populating playlists
 // curl -X GET "https://api.spotify.com/v1/browse/featured-playlists?country=US&limit=2" -H "Accept: application/json" -H "Authorization: Bearer BQArUpyPc3JnmoRIEUIgw8kcLv5tAZscp6E7k1VKOWztGtmKfP1dZ4jTJPbI-PoWVjh7QgBC7UtL9-cxCP1rkFcoySSgNVjP0D7vnNoNt885DecQzEvPn1xmVw9MdVVb9irE53VbVU-4ftjDY8qcQx-ZEDbWEtSZ08f5Qlaf0sNi8yNnDjYu1qkeYyMupCJ7hJG9VnHVcMlFn8zqUGSEcYZXGN4Ip3iwLYTdfhs_yCipPMMjNk_x6-uhmFo"
 
-function pullPlaylist(){
-  $.ajax(
-  {
-      url: "https://api.spotify.com/v1/browse/featured-playlists",
-      type: "GET",
-      success: function (response){
-        console.log(response.data.feed[0].content.title_alt);
-        console.log(response.data.feed[0].content.media.images[0].original_url);
+// function pullPlaylist(){
+//   $.ajax(
+//   {
+//       url: "https://api.spotify.com/v1/browse/featured-playlists",
+//       type: "GET",
+//       success: function (response){
+//         console.log(response.data.feed[0].content.title_alt);
+//         console.log(response.data.feed[0].content.media.images[0].original_url);
 
-        $.each(response.data.feed, function(index, playlistObj){
-          var playlist_struct = '<playlist class="playlist">';
-          var playlist_pic = '<section class="featuredImage">' +'<img src="'+playlistObj.content.media.images[0].url+'" alt="" />' + '</section>';
-          var playlist_content = '<section class="playlistContent"> <a href ="'+playlistObj.content.original_url+'"><h3>'+ index + ' ' + playlistObj.content.title_alt+'</h3></a><h6>'+playlistObj.content.domain+'</h6></section>';
-          var impressions = '<section class="impressions">' + playlistObj.diggs.count + '</section>';
-          $('#playlist').append(playlist_struct + playlist_pic + playlist_content+impressions+'<div class="clearfix"></div></playlist>');
-        });
+//         $.each(response.data.feed, function(index, playlistObj){
+//           var playlist_struct = '<playlist class="playlist">';
+//           var playlist_pic = '<section class="featuredImage">' +'<img src="'+playlistObj.content.media.images[0].url+'" alt="" />' + '</section>';
+//           var playlist_content = '<section class="playlistContent"> <a href ="'+playlistObj.content.original_url+'"><h3>'+ index + ' ' + playlistObj.content.title_alt+'</h3></a><h6>'+playlistObj.content.domain+'</h6></section>';
+//           var impressions = '<section class="impressions">' + playlistObj.diggs.count + '</section>';
+//           $('#playlist').append(playlist_struct + playlist_pic + playlist_content+impressions+'<div class="clearfix"></div></playlist>');
+//         });
 
-      },
-  });
-}
+//       },
+//   });
+// }
 
-pullPlaylist()
+// pullPlaylist()

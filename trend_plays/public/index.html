@@ -181,6 +181,7 @@
           }
           return text;
         };
+
         var userProfileSource = document.getElementById('user-profile-template').innerHTML,
             userProfileTemplate = Handlebars.compile(userProfileSource),
             userProfilePlaceholder = document.getElementById('user-profile');
@@ -191,6 +192,7 @@
         var access_token = params.access_token,
             state = params.state,
             storedState = localStorage.getItem(stateKey);
+
         if (access_token && (state == null || state !== storedState)) {
           alert('There was an error during the authentication');
         } else {
@@ -211,7 +213,10 @@
               $('#login').show();
               $('#loggedin').hide();
           }
-          document.getElementById('login-link').addEventListener('click', function() {
+
+          $('#login-link').click(function (event) {
+            event.preventDefault();
+
             var client_id = 'c46fd0ff002546aebabebbbf7e5c955e'; // client id
             var redirect_uri = 'http://localhost:8888/callback'; // redirect uri
             var state = generateRandomString(16);
@@ -223,8 +228,24 @@
             url += '&scope=' + encodeURIComponent(scope);
             url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
             url += '&state=' + encodeURIComponent(state);
+
             window.location = url;
-          }, false);
+          })
+
+          // document.getElementById('login-link').addEventListener('click', function() {
+          //   var client_id = 'c46fd0ff002546aebabebbbf7e5c955e'; // client id
+          //   var redirect_uri = 'http://localhost:8888/callback'; // redirect uri
+          //   var state = generateRandomString(16);
+          //   localStorage.setItem(stateKey, state);
+          //   var scope = 'user-read-private user-read-email';
+          //   var url = 'https://accounts.spotify.com/authorize';
+          //   url += '?response_type=token';
+          //   url += '&client_id=' + encodeURIComponent(client_id);
+          //   url += '&scope=' + encodeURIComponent(scope);
+          //   url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
+          //   url += '&state=' + encodeURIComponent(state);
+          //   window.location = url;
+          // }, false);
         }
       })();
     </script>
@@ -245,7 +266,7 @@
       type="text/javascript"></script> -->
 
     <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+    <!-- <script src="js/grayscale.min.js"></script> -->
 
 </body>
 
